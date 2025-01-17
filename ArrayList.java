@@ -1,42 +1,20 @@
 import java.util.NoSuchElementException;
 
-/**
- * Your implementation of an ArrayList.
- *
- * @author David Johnson
- * @version 1.0
- * @userid djohnson477
- * @GTID 903897142
- *
- * Collaborators: LIST ALL COLLABORATORS YOU WORKED WITH HERE
- *
- * Resources: LIST ALL NON-COURSE RESOURCES YOU CONSULTED HERE
- * 
- * By typing 'I agree' below, you are agreeing that this is your
- * own work and that you are responsible for all the contents of 
- * this file. If this is left blank, this homework will receive a zero.
- * 
- * Sign Here: I agree
- * 
- */
+
 public class ArrayList<T> {
 
     /**
      * The initial capacity of the ArrayList.
      *
-     * DO NOT MODIFY THIS VARIABLE!
      */
     public static final int INITIAL_CAPACITY = 9;
 
-    // Do not add new instance variables or modify existing ones.
     private T[] backingArray;
     private int size;
 
     /**
      * Constructs a new ArrayList.
      *
-     * Java does not allow for regular generic array creation, so you will have
-     * to cast an Object[] to a T[] to get the generic typing.
      */
     @SuppressWarnings("unchecked")
     public ArrayList() {
@@ -89,7 +67,7 @@ public class ArrayList<T> {
      *
      * Remember that this add may require elements to be shifted.
      *
-     * Must be amortized O(1) for index size and O(n) for all other cases.
+     * Is amortized O(1) for index size and O(n) for all other cases.
      *
      * @param index the index at which to add the new element
      * @param data  the data to add at the specified index
@@ -118,7 +96,7 @@ public class ArrayList<T> {
      *
      * Remember that this add may require elements to be shifted.
      *
-     * Must be O(n).
+     * Is O(n).
      *
      * @param data the data to add to the front of the list
      * @throws java.lang.IllegalArgumentException if data is null
@@ -142,7 +120,7 @@ public class ArrayList<T> {
     /**
      * Adds the element to the back of the list.
      *
-     * Must be amortized O(1).
+     * Is amortized O(1).
      *
      * @param data the data to add to the back of the list
      * @throws java.lang.IllegalArgumentException if data is null
@@ -164,7 +142,7 @@ public class ArrayList<T> {
      *
      * Remember that this remove may require elements to be shifted.
      *
-     * Must be O(1) for index size - 1 and O(n) for all other cases.
+     * is O(1) for index size - 1 and O(n) for all other cases.
      *
      * @param index the index of the element to remove
      * @return the data formerly located at the specified index
@@ -185,7 +163,7 @@ public class ArrayList<T> {
      *
      * Remember that this remove may require elements to be shifted.
      *
-     * Must be O(n).
+     * Is O(n).
      *
      * @return the data formerly located at the front of the list
      * @throws java.util.NoSuchElementException if the list is empty
@@ -204,7 +182,7 @@ public class ArrayList<T> {
     /**
      * Removes and returns the last element of the list.
      *
-     * Must be O(1).
+     * Is O(1).
      *
      * @return the data formerly located at the back of the list
      * @throws java.util.NoSuchElementException if the list is empty
@@ -219,7 +197,7 @@ public class ArrayList<T> {
     /**
      * Returns the element at the specified index.
      *
-     * Must be O(1).
+     * Is O(1).
      *
      * @param index the index of the element to get
      * @return the data stored at the index in the list
@@ -236,7 +214,7 @@ public class ArrayList<T> {
     /**
      * Returns whether or not the list is empty.
      *
-     * Must be O(1).
+     * Is O(1).
      *
      * @return true if empty, false otherwise
      */
@@ -253,7 +231,7 @@ public class ArrayList<T> {
      * Resets the backing array to a new array of the initial capacity and
      * resets the size.
      *
-     * Must be O(1).
+     * Is O(1).
      */
     @SuppressWarnings("unchecked")
     public void clear() {
@@ -265,8 +243,6 @@ public class ArrayList<T> {
     /**
      * Returns the backing array of the list.
      *
-     * For grading purposes only. You shouldn't need to use this method since
-     * you have direct access to the variable.
      *
      * @return the backing array of the list
      */
@@ -277,9 +253,6 @@ public class ArrayList<T> {
 
     /**
      * Returns the size of the list.
-     *
-     * For grading purposes only. You shouldn't need to use this method since
-     * you have direct access to the variable.
      *
      * @return the size of the list
      */
